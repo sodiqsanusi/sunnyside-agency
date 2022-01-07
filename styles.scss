@@ -1,0 +1,43 @@
+// font-family: 'Barlow', sans-serif;
+// font-family: 'Fraunces', serif;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fraunces', serif;
+}
+img{
+  width: 100%;
+}
+p{
+  font-size: 18px;
+}
+p,a,h6{
+  font-family: 'Barlow', sans-serif;
+}
+button:hover,button:focus{
+  transform: scale(0.8);
+  opacity: 20%;
+}
+/* ======================================================================
+ The main css changes to the navigation panel and section of the web site
+ ======================================================================== */
+#mainnav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:   #5fc3ee;
+  padding: 2em 1em;
+  section{
+    width: 50%;
+  }
+  button{
+    width: 10%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .3s;
+  }
+}
+
