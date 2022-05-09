@@ -26,8 +26,8 @@ button:hover,button:focus{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:   #5fc3ee;
-  padding: 2em 1em;
+  background-color:   #29b6f1;
+  padding: 2em 1.5em;
   section{
     width: 50%;
   }
@@ -40,4 +40,18 @@ button:hover,button:focus{
     transition: .3s;
   }
 }
-
+/* ======================================================================
+ The main css changes to the header section of the web site
+ ======================================================================== */
+ header{
+   background-color: #2cc1ff;
+   background: linear-gradient(#29b6f1 3%, #2cc1ff 10%);
+   text-align: center;
+   background: url('./images/mobile/image-header.jpg');
+   h1{
+     padding: 1em 0;
+     color: #fff;
+     letter-spacing: 1px;
+     font-size: 3rem;
+   }
+ }
