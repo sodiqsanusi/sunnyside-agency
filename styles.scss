@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Fraunces', serif;
+  transition: .3s;
 }
 img{
   width: 100%;
@@ -187,9 +188,49 @@ button:hover,button:focus{
       h6{color: #a7abae;}
     }
   }
-
-
-
-
-
+/* ======================================================================
+ The main css changes to the fancy images section of the web site
+======================================================================== */  
+#fancyImagesSection{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  img{height: 100%;}
+}
+/* ======================================================================
+ The main css changes to the footer of the web site
+======================================================================== */  
+footer{
+  background-color: #2daf959f;
+  padding: 3em 2em;
+  @include flexCentered();
+  section{
+    width: 70%;
+    img{filter: invert(56%) sepia(15%) saturate(1534%) hue-rotate(116deg) brightness(93%) contrast(85%);}
+    margin: 1.5em 0 2em;
+  }
+}
+.footerNormalLinks{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  a{
+    text-decoration: none;
+    color: #2c7566d7;
+    font-size: 1.1rem;
+  }a:hover,a:focus{
+    color: #fff;
+  }
+}
+.footerImageLinks{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4em 0;
+  width: 55%;
+  a{
+    width: 15%;
+  }a:hover,a:focus{img{filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(30deg) brightness(100%) contrast(200%);}}
+}
 
