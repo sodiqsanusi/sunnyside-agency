@@ -19,6 +19,16 @@ button:hover,button:focus{
   transform: scale(0.8);
   opacity: 20%;
 }
+a:hover,a:focus{
+  transform: scale(0.8);
+  opacity: 80%;
+}
+@mixin flexCentered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 /* ======================================================================
  The main css changes to the navigation panel and section of the web site
  ======================================================================== */
@@ -26,7 +36,7 @@ button:hover,button:focus{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:   #29b6f1;
+  background-color:   #2cc1ff;
   padding: 2em 1.5em;
   section{
     width: 50%;
@@ -47,11 +57,53 @@ button:hover,button:focus{
    background-color: #2cc1ff;
    background: linear-gradient(#29b6f1 3%, #2cc1ff 10%);
    text-align: center;
-   background: url('./images/mobile/image-header.jpg');
+   background-image: url('./images/mobile/image-header.jpg');
+   background-position: 50% 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   @include flexCentered();
    h1{
+     margin: .5em 0 .3em;
      padding: 1em 0;
      color: #fff;
-     letter-spacing: 1px;
-     font-size: 3rem;
+     letter-spacing: 7px;
+     font-size: Min(10vw, 3rem);
+   }
+   #headerArrowImage{
+     width: 10%;
+     margin-bottom: 40%;
+   }
+ }
+ /* ======================================================================
+ The main css changes to the main section of the web site
+ ======================================================================== */
+ main{
+   .articlesWithLinks{
+     display: flex;
+     flex-direction: column;
+   }
+   .articlesWithLinks--text{
+     @include flexCentered();
+     text-align: center;
+     padding: 2em 1.5em;
+     h2{
+       color: #23303e;
+       font-size: 2rem;
+       margin: 1em .5em;
+     }
+     p{
+       color: #818498;
+       font-size: 1rem;
+       line-height: 1.5;
+     }
+     a{
+       text-decoration: none;
+       color: #23303e;
+       font-family: 'Fraunces', serif;
+       transition: .5s;
+       margin: 2em 0;
+       border-bottom: solid 5px #fad400;
+       border-radius: 5px;
+     }
    }
  }
