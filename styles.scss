@@ -17,7 +17,7 @@ p,a,h6{
   font-family: 'Barlow', sans-serif;
 }
 button:hover,button:focus{
-  transform: scale(0.8);
+  transform: scale(0.9);
   opacity: 20%;
 }
 //To improve ease of aligning items to the center for different parent elements
@@ -52,6 +52,7 @@ button:hover,button:focus{
  The main css changes to the header section of the web site
 ======================================================================== */
  header{
+   position: relative;
    background-color: #2cc1ff;
    background: linear-gradient(#29b6f1 3%, #2cc1ff 10%);
    text-align: center;
@@ -72,6 +73,49 @@ button:hover,button:focus{
      width: 10%;
      margin-bottom: 40%;
    }
+ }
+ .mobileNav{
+   display: none;
+   position: absolute;
+   background-color: #fff;
+   width: 80%;
+   padding: 3em 0 1em;
+   height: 70%;
+   top: 5%;
+   ul{
+     @include flexCentered();
+     height: 90%;
+     justify-content: space-between;
+   }
+   li{
+     list-style: none;
+   }
+   a{
+     text-decoration: none;
+     font-size: 1.3rem;
+     color: #818498;
+   }a:focus,a:hover{
+     color: #fad400;
+   }
+   button{
+     cursor: pointer;
+     background-color: #fad400;
+     color: #23303e;
+     font-size: 1rem;
+     padding: 1em 2em;
+     border: none;
+     border-radius: 40px;
+   }
+ }
+ .mobileNav::after{
+   content: '';
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   right: 0;
+   top: -40px; 
+   border-bottom-right-radius: 50%;
+   box-shadow: 0 20px 0 0 #fff;
  }
 /* ======================================================================
  The main css changes to the main section of the web site
@@ -209,6 +253,7 @@ footer{
     img{filter: invert(56%) sepia(15%) saturate(1534%) hue-rotate(116deg) brightness(93%) contrast(85%);}
     margin: 1.5em 0 2em;
   }
+  li{list-style: none;}
 }
 .footerNormalLinks{
   display: flex;
