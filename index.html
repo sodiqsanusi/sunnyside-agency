@@ -15,11 +15,19 @@
 <body>
   <nav id="mainnav">
     <section><img src="./images/logo.svg" alt="Sunnyside's illustrious logo"></section>
-    <button><img src="./images/icon-hamburger.svg" alt="Click to open mobile navigation menu"></button>
+    <button id="mobileNavHamburger"><img src="./images/icon-hamburger.svg" alt="Click to open mobile navigation menu"></button>
   </nav>
   <header>
     <h1>WE ARE CREATIVES</h1>
     <div id="headerArrowImage"><img src="./images/icon-arrow-down.svg" alt="" role="presentation"></div>
+    <aside class="mobileNav">
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><button>CONTACT</button></li>
+      </ul>
+    </aside>
   </header>
   <main>
     <article class="articlesWithLinks" id="firstPress">
@@ -93,16 +101,25 @@
   <footer>
     <section><img src="./images/logo.svg" alt="Sunnyside's illustrious logo"></section>
     <ul class="footerNormalLinks">
-      <a href="">About</a>
-      <a href="">Services</a>
-      <a href="">Projects</a>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Projects</a></li> 
     </ul>
     <ul class="footerImageLinks">
-      <a href=""><img src="./images/icon-facebook.svg" alt="Click to enter our Facebook page"></a>
-      <a href=""><img src="./images/icon-instagram.svg" alt="Click to enter our Instagram page"></a>
-      <a href=""><img src="./images/icon-twitter.svg" alt="Click to enter our Twitter page"></a>
-      <a href=""><img src="./images/icon-pinterest.svg" alt="Click to enter our Pinterest page"></a>
+      <li><a href="#"><img src="./images/icon-facebook.svg" alt="Click to enter our Facebook page"></a></li>
+      <li><a href="#"><img src="./images/icon-instagram.svg" alt="Click to enter our Instagram page"></a></li>
+      <li><a href="#"><img src="./images/icon-twitter.svg" alt="Click to enter our Twitter page"></a></li>
+      <li><a href="#"><img src="./images/icon-pinterest.svg" alt="Click to enter our Pinterest page"></a></li>
     </ul>
   </footer>
+  <script>
+    const mobileNavButton = document.getElementById('mobileNavHamburger');
+    const mobileNav = document.querySelector('.mobileNav');
+    let isMobileNavOpen = false;
+    mobileNavButton.addEventListener('click', () => {
+      isMobileNavOpen = !isMobileNavOpen;
+      isMobileNavOpen ? mobileNav.style.display='block' : mobileNav.style.display='none';
+    })
+  </script>
 </body>
 </html>
