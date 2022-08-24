@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/sodiqsanusi/sunnyside-agency/]()
-- Live Site URL: [https://thesunnyagency.netlify.app/]()
+- Solution URL: [https://github.com/sodiqsanusi/sunnyside-agency/](https://github.com/sodiqsanusi/sunnyside-agency/)
+- Live Site URL: [https://thesunnyagency.netlify.app/](https://thesunnyagency.netlify.app/)
 
 ## My process
 Due to the high amount of visual content and my preference towards a better mobile interface, used the mobile-first workflow during the buildup. Also experimented with responsive typography and it worked!😊 Responsive typography is something I'm definitely learning on better in the coming weeks.
